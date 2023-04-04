@@ -8,6 +8,7 @@ import {
 } from "react-accessible-accordion";
 import "./forecast.css";
 
+//Array containing each day of the week to avoid hard coding every single one and overpopulating the code
 const WEEK_DAYS = [
   "Monday",
   "Tuesday",
@@ -18,15 +19,17 @@ const WEEK_DAYS = [
   "Sunday",
 ];
 
+//The 7-day forecast which is aware of the present day and outputs the following 7 days of forecast
 const Forecast = ({ data }) => {
   const dayInAWeek = new Date().getDay();
   const forecastDays = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length).concat(
     WEEK_DAYS.slice(0, dayInAWeek)
   );
 
+  //Output of the forecast, using accessible-accordion component for a cleaner and faster list with drop-down details
   return (
     <>
-      <label className="title">7-Day Forecast</label>
+      <label className="title">7 Day Forecast</label>
       <Accordion allowZeroExpanded>
         {data.list.slice(0, 7).map((item, idx) => (
           <AccordionItem key={idx}>

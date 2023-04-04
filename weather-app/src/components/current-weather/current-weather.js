@@ -1,19 +1,23 @@
 import "./current-weather.css";
+import "animate.css";
 
+//Current weather card with top and bottom elements for the main information and added details such as wind speed, humidity etc.
 const CurrentWeather = ({ data }) => {
   return (
-    <div className="weather">
+    <div className="weather animate__animated animate__fadeIn">
+      {/* Top part of the card with the main information */}
       <div className="top">
         <div>
-          <p className="city">{data.city}</p>
+          <p className="city">{data.name}</p>
           <p className="weather-description">{data.weather[0].description}</p>
         </div>
         <img
           src={`icons/${data.weather[0].icon}.png`}
           alt="weather"
-          className="weather-icon"
+          className="weather-icon animate__animated animate__rotateIn"
         />
       </div>
+      {/* Bottom part containing a detailed view of other weather factors and precipitations */}
       <div className="bottom">
         <p className="temperature">{Math.round(data.main.temp)}°C</p>
         <div className="details">

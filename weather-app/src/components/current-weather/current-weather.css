@@ -1,4 +1,5 @@
-.weather {
+/* Weather card styling while light mode is active */
+#light .weather {
     width: 300px;
     border-radius: 6px;
     box-shadow: 10px -2px 20px 2px rgb(0, 0, 0 / 30%);
@@ -8,6 +9,18 @@
     padding: 0 20px 20px 20px;
 }
 
+/* Weather card styling while dark mode is active */
+#dark .weather {
+    width: 300px;
+    border-radius: 6px;
+    box-shadow: 10px -2px 20px 2px rgb(240, 240, 240 / 30%);
+    color: #000;
+    background-color: #fff;
+    margin: 20px auto 0 auto;
+    padding: 0 20px 20px 20px;
+}
+
+/* Other styling elements for the weather card */
 .top,
 .bottom {
     display: flex;

@@ -3,6 +3,7 @@
     font-weight: 700;
 }
 
+/* Styling for the 7 day forecast */
 .daily-item {
     background-color: #f5f5f5;
     border-radius: 15px;
@@ -36,6 +37,7 @@
     color: #757575;
 }
 
+/* Details styling form the drop-down description */
 .daily-details-grid {
     grid-row-gap: 0;
     grid-column-gap: 15px;
